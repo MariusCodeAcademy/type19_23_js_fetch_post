@@ -2,7 +2,7 @@
 console.log('create.js file was loaded');
 
 const postsUrl = 'https://jsonplaceholder.typicode.com/posts';
-
+// 'http://localhost:5000/posts'
 const els = {
   formEl: document.forms[0],
   titleEL: document.getElementById('title'),
