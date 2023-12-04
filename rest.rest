@@ -1,0 +1,32 @@
+### Good request
+
+POST https://dummyjson.com/auth/login
+Content-Type: application/json
+
+{
+  "username": "kminchelle",
+  "password": "0lelplR"
+}
+
+### Bad request
+
+POST https://dummyjson.com/auth/login
+Content-Type: application/json
+
+{
+  "username": "James",
+  "password": "0lelplR"
+}
+
+### Atskyrimas vienos uzklauson nuo kitos
+
+GET https://dummyjson.com/users
+
+
+### Get all posts
+
+GET https://dummyjson.com/posts
+
+### get single post
+
+GET https://dummyjson.com/posts/2
