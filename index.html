@@ -5,17 +5,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fetch post</title>
-  <script src="js/fetchPost.js" defer></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- <script src="js/fetchPost.js" defer></script> -->
+  <script src="js/create.js" defer></script>
 </head>
 
 <body>
-  <h1>Fetch post</h1>
+  <div class="container mt-4">
+    <h1>Fetch post</h1>
 
-  <button id="btn1">Post</button>
+    <button class="btn btn-primary mb-4" id="btn1">Post</button>
 
-  <form>
 
-  </form>
+    <form class="pb-5" id="postDataForm">
+      <div class="form-group">
+        <label for="title">Title:</label>
+        <input type="text" class="form-control" id="title" name="title" required>
+      </div>
+
+      <div class="form-group">
+        <label for="content">Content:</label>
+        <textarea class="form-control" id="content" name="content" rows="5" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="userId">User ID:</label>
+        <input type="number" class="form-control" id="userId" name="userId" required>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
 
 </body>
 
