@@ -33,19 +33,22 @@ function sendLoginData(loginData) {
     .then((resp) => {
       console.log('resp ===', resp);
       // sekmes atveju status === 200
-      if (resp.status === 200) {
-        console.log('sekme');
-        // sekmes atveju naviguoti i index.html
-        window.location.replace('index.html');
-      } else if (resp.status === 400) {
-        console.log('nesekme');
-        alert('pasitikrinkite laukus');
-      }
+      // if (resp.status === 200) {
+      //   console.log('sekme');
+      //   // sekmes atveju naviguoti i index.html
+      //   window.location.replace('users.html');
+      // } else if (resp.status === 400) {
+      //   console.log('nesekme');
+      //   alert('pasitikrinkite laukus');
+      // }
       // nesekmes atveju status === 400
       return resp.json();
     })
     .then((loginRezult) => {
       // nesekmes atveju loginRezult yra message 'Invalid credentials'
+      if (loginRezult.message === 'Invalid credentials') {
+        console.log('nesekme');
+      }
       // sekmes atveju loginRezult butu id laukas su reiksme
       console.log('loginRezult ===', loginRezult);
     })
